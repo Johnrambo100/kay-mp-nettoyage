@@ -1,21 +1,33 @@
-/* Design Kay MP Nettoyage */
 :root {
-    --bleu: #0077b6;
-    --fond: #f0f8ff;
-    --texte: #333;
+    --primary: #0077b6; /* Bleu confiance */
+    --secondary: #00b4d8; /* Bleu clair */
+    --bg: #f8fbff;
+    --dark: #1d3557;
+    --white: #ffffff;
 }
 
-body { font-family: sans-serif; margin: 0; color: var(--texte); line-height: 1.6; }
+body { font-family: 'Helvetica Neue', sans-serif; margin: 0; color: var(--dark); line-height: 1.6; background: var(--bg); }
 
-/* Menu */
-nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); sticky; top: 0; }
-.logo { font-size: 1.5rem; font-weight: bold; color: var(--bleu); }
-nav ul { display: flex; list-style: none; gap: 20px; }
-nav a { text-decoration: none; color: var(--texte); font-weight: bold; }
+/* Navigation */
+nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); sticky; top: 0; z-index: 1000; }
+.logo { font-size: 1.6rem; font-weight: 800; color: var(--primary); text-transform: uppercase; }
+nav ul { display: flex; list-style: none; gap: 15px; margin: 0; }
+nav a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+nav a:hover { color: var(--primary); }
 
-/* Sections */
-.hero { background: var(--fond); padding: 60px 20px; text-align: center; }
-.container { max-width: 1000px; margin: auto; padding: 40px 20px; }
-.btn { background: var(--bleu); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; }
+/* Hero & Sections */
+.hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 100px 20px; text-align: center; }
+.container { max-width: 1100px; margin: auto; padding: 60px 20px; }
+h1, h2 { color: var(--primary); }
+.white-text { color: white; }
 
-footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 50px; }
+/* Grid & Cards */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+.card { background: var(--white); padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s; }
+.card:hover { transform: translateY(-5px); }
+
+/* Buttons */
+.btn { background: var(--white); color: var(--primary); padding: 12px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.btn-blue { background: var(--primary); color: white; }
+
+footer { background: var(--dark); color: white; text-align: center; padding: 40px 20px; margin-top: 60px; }
