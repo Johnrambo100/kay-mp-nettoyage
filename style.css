@@ -1,0 +1,21 @@
+/* Design Kay MP Nettoyage */
+:root {
+    --bleu: #0077b6;
+    --fond: #f0f8ff;
+    --texte: #333;
+}
+
+body { font-family: sans-serif; margin: 0; color: var(--texte); line-height: 1.6; }
+
+/* Menu */
+nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); sticky; top: 0; }
+.logo { font-size: 1.5rem; font-weight: bold; color: var(--bleu); }
+nav ul { display: flex; list-style: none; gap: 20px; }
+nav a { text-decoration: none; color: var(--texte); font-weight: bold; }
+
+/* Sections */
+.hero { background: var(--fond); padding: 60px 20px; text-align: center; }
+.container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+.btn { background: var(--bleu); color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; }
+
+footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 50px; }
