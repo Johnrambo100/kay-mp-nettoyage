@@ -1,29 +1,75 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Réalisations | Kay MP Nettoyage</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Réalisations | KAY MP Nettoyage</title>
+  <meta name="description" content="Quelques exemples de réalisations : fin de chantier, remise en état, vitres et locaux. Montauban & Occitanie." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <nav>
-        <div class="logo">Kay MP</div>
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="apropos.html">À Propos</a></li>
-            <li><a href="realisations.html">Réalisations</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <h1>Nos Derniers Chantiers</h1>
-        <div class="grid">
-            <div class="card"><h3>Siège Social X</h3><p>Entretien quotidien de 1200m² de bureaux.</p></div>
-            <div class="card"><h3>Résidence Horizon</h3><p>Nettoyage des vitres et façades (R+4).</p></div>
-            <div class="card"><h3>Chantier BTP</h3><p>Remise en état complète avant remise des clés.</p></div>
-        </div>
+
+<header class="topbar">
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <div class="logo">KM</div>
+        <div>KAY MP <span class="small">Nettoyage</span></div>
+      </a>
+      <nav class="navlinks">
+        <a href="services.html">Services</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="apropos.html">À propos</a>
+        <a href="contact.html" class="btn primary">Demander un devis</a>
+      </nav>
     </div>
-    <footer><p>&copy; 2026 Kay MP Nettoyage</p></footer>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="hcard">
+      <h1 class="h1" style="font-size:clamp(26px,3.2vw,38px);margin-bottom:10px;">Réalisations</h1>
+      <p class="lead" style="margin:0;">
+        Ajoutez ici vos photos <strong>avant / après</strong> pour rassurer les clients.
+        Si vous me donnez 6 à 12 photos, je te les intègre proprement.
+      </p>
+      <div style="height:14px;"></div>
+      <div class="btnrow">
+        <a class="btn primary" href="contact.html">📩 Demander un devis</a>
+        <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+    </div>
+
+    <div style="height:18px;"></div>
+
+    <div class="gallery">
+      <div class="ph"><span>Fin de chantier — Sols</span></div>
+      <div class="ph"><span>Fin de chantier — Vitres</span></div>
+      <div class="ph"><span>Remise en état — Cuisine</span></div>
+      <div class="ph"><span>Remise en état — Salle de bain</span></div>
+      <div class="ph"><span>Locaux — Bureau</span></div>
+      <div class="ph"><span>Parties communes</span></div>
+    </div>
+
+    <div style="height:18px;"></div>
+
+    <div class="hcard">
+      <h2 style="margin:0 0 10px;">Astuce</h2>
+      <p class="small" style="margin:0;">
+        Le mieux : 6 photos “avant” + 6 photos “après”, prises au même endroit.
+        Ça augmente énormément la confiance et les demandes de devis.
+      </p>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>© <span id="y"></span> KAY MP Nettoyage.</div>
+  </div>
+</footer>
+
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>
