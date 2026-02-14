@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -7,20 +7,11 @@
   <meta name="description" content="Réalisations KAY MP Nettoyage : fin de chantier, remise en état, vitres, locaux. Montauban & Occitanie." />
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Mini styles spécifiques à la page */
-    .grid2{
-      display:grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap:14px;
-    }
-    @media (max-width: 900px){ .grid2{ grid-template-columns:1fr; } }
+    .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    @media (max-width:900px){.grid2{grid-template-columns:1fr}}
 
-    .gallery4{
-      display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap:12px;
-    }
-    @media (max-width: 900px){ .gallery4{ grid-template-columns:1fr 1fr; } }
+    .gallery4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    @media (max-width:900px){.gallery4{grid-template-columns:1fr 1fr}}
 
     .shot{
       position:relative;
@@ -31,60 +22,34 @@
       box-shadow: 0 16px 40px rgba(15,23,42,.06);
       min-height: 170px;
     }
-    .shot img{
-      width:100%;
-      height:220px;
-      object-fit:cover;
-      display:block;
-    }
+    .shot img{width:100%;height:220px;object-fit:cover;display:block}
     .shot .cap{
-      position:absolute;
-      left:10px;
-      bottom:10px;
+      position:absolute;left:10px;bottom:10px;
       background: rgba(255,255,255,.92);
       border:1px solid rgba(226,232,240,.9);
-      padding:7px 10px;
-      border-radius: 999px;
-      font-size:.92rem;
-      color: var(--muted);
+      padding:7px 10px;border-radius:999px;
+      font-size:.92rem;color:var(--muted);
       box-shadow: 0 10px 25px rgba(15,23,42,.08);
     }
 
-    .beforeafter{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:12px;
-    }
-    @media (max-width: 900px){ .beforeafter{ grid-template-columns:1fr; } }
+    .beforeafter{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:900px){.beforeafter{grid-template-columns:1fr}}
 
     .ba{
       border:1px solid var(--line);
       border-radius: var(--radius);
-      overflow:hidden;
-      background:#fff;
+      overflow:hidden;background:#fff;
       box-shadow: 0 16px 40px rgba(15,23,42,.06);
     }
-    .ba img{
-      width:100%;
-      height:260px;
-      object-fit:cover;
-      display:block;
-    }
+    .ba img{width:100%;height:260px;object-fit:cover;display:block}
     .ba .label{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:12px 14px;
-      border-top:1px solid var(--line);
-      color:var(--muted);
-      font-size:.95rem;
-      background: #fff;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:12px 14px;border-top:1px solid var(--line);
+      color:var(--muted);font-size:.95rem;background:#fff;
     }
     .pill{
-      padding:6px 10px;
-      border-radius:999px;
-      font-weight:700;
-      border:1px solid var(--line);
+      padding:6px 10px;border-radius:999px;
+      font-weight:700;border:1px solid var(--line);
       background: rgba(37,99,235,.06);
       color: var(--text);
     }
@@ -100,7 +65,9 @@
         <div>KAY MP <span class="small">Nettoyage</span></div>
       </a>
 
-      <nav class="navlinks">
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+      <nav class="navlinks" id="navMenu">
         <a href="services.html">Services</a>
         <a href="realisations.html">Réalisations</a>
         <a href="apropos.html">À propos</a>
@@ -116,8 +83,7 @@
     <div class="card">
       <h1 class="h1" style="font-size:clamp(26px,3.2vw,40px);margin-bottom:10px;">Réalisations</h1>
       <p class="lead" style="margin:0;">
-        Quelques exemples de chantiers réalisés (spécialité : <strong>fin de chantier</strong>).
-        Intervention en <strong>Montauban & alentours</strong>.
+        Exemples de chantiers (spécialité : <strong>fin de chantier</strong>) — <strong>Montauban & alentours</strong>.
       </p>
 
       <div style="height:14px;"></div>
@@ -129,51 +95,38 @@
 
       <div style="height:14px;"></div>
       <div class="notice">
-        <strong>Conseil :</strong> les photos “avant / après” au même angle augmentent énormément la confiance.
+        <strong>Conseil :</strong> remplace les images par les tiennes dans le dossier <strong>images/</strong>.
       </div>
     </div>
 
     <div style="height:18px;"></div>
 
-    <!-- SECTION AVANT/APRÈS -->
     <section class="card">
       <h2 style="margin:0 0 10px;">Avant / Après</h2>
       <p class="small" style="margin:0 0 14px;">
-        Remplace les images ci-dessous par les tiennes (dossier <strong>images/</strong>).
+        Mets 2 photos prises au même angle (avant + après). Ça fait très pro.
       </p>
 
       <div class="grid2">
         <div class="beforeafter">
           <div class="ba">
             <img src="images/chantier-1-avant.jpg" alt="Avant nettoyage fin de chantier">
-            <div class="label">
-              <span class="pill">Avant</span>
-              <span>Fin de chantier — Sols</span>
-            </div>
+            <div class="label"><span class="pill">Avant</span><span>Fin de chantier — Sols</span></div>
           </div>
           <div class="ba">
             <img src="images/chantier-1-apres.jpg" alt="Après nettoyage fin de chantier">
-            <div class="label">
-              <span class="pill">Après</span>
-              <span>Résultat prêt à livrer</span>
-            </div>
+            <div class="label"><span class="pill">Après</span><span>Résultat prêt à livrer</span></div>
           </div>
         </div>
 
         <div class="beforeafter">
           <div class="ba">
             <img src="images/chantier-2-avant.jpg" alt="Avant remise en état">
-            <div class="label">
-              <span class="pill">Avant</span>
-              <span>Remise en état — Cuisine</span>
-            </div>
+            <div class="label"><span class="pill">Avant</span><span>Remise en état — Cuisine</span></div>
           </div>
           <div class="ba">
             <img src="images/chantier-2-apres.jpg" alt="Après remise en état">
-            <div class="label">
-              <span class="pill">Après</span>
-              <span>Nettoyage approfondi</span>
-            </div>
+            <div class="label"><span class="pill">Après</span><span>Nettoyage approfondi</span></div>
           </div>
         </div>
       </div>
@@ -181,11 +134,10 @@
 
     <div style="height:18px;"></div>
 
-    <!-- GALERIE -->
     <section class="card">
       <h2 style="margin:0 0 10px;">Galerie</h2>
       <p class="small" style="margin:0 0 14px;">
-        Ajoute ici tes meilleures photos (vitres, sanitaires, sols, bureaux…).
+        8 à 12 photos max : vitres, sanitaires, sols, bureaux…
       </p>
 
       <div class="gallery4">
@@ -209,13 +161,12 @@
 
       <div style="height:14px;"></div>
       <div class="notice">
-        Tu peux mettre 8 à 12 photos max. Mieux vaut peu de photos mais très propres.
+        Si tu veux, je te prépare une version “portfolio” avec titres de chantiers (ex : “Maison – Montauban”).
       </div>
     </section>
 
     <div style="height:18px;"></div>
 
-    <!-- CTA -->
     <section class="card">
       <h2 style="margin:0 0 10px;">Vous avez un chantier à livrer ?</h2>
       <p class="small" style="margin:0 0 14px;">
@@ -239,7 +190,19 @@
 
 <script>
   document.getElementById("y").textContent = new Date().getFullYear();
+
+  function toggleMenu(){
+    document.getElementById("navMenu").classList.toggle("show");
+  }
+
+  document.addEventListener("click", (e) => {
+    const menu = document.getElementById("navMenu");
+    const burger = document.querySelector(".hamburger");
+    if (!menu || !burger) return;
+    const clickedInside = menu.contains(e.target) || burger.contains(e.target);
+    if (!clickedInside) menu.classList.remove("show");
+  });
 </script>
 
 </body>
-</html>
+          </html>
