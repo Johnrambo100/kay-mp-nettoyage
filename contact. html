@@ -17,7 +17,9 @@
         <div>KAY MP <span class="small">Nettoyage</span></div>
       </a>
 
-      <nav class="navlinks">
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+      <nav class="navlinks" id="navMenu">
         <a href="services.html">Services</a>
         <a href="realisations.html">Réalisations</a>
         <a href="apropos.html">À propos</a>
@@ -57,14 +59,12 @@
     <div style="height:18px;"></div>
 
     <div class="split">
-      <!-- FORMULAIRE -->
       <section class="card" id="form">
         <h2 style="margin:0 0 10px;">Formulaire de demande</h2>
         <p class="small" style="margin:0 0 14px;">
-          Ce formulaire ouvre votre application mail. Si vous préférez, écrivez directement sur WhatsApp (le plus fiable).
+          Ce formulaire ouvre votre application mail. Le plus fiable reste WhatsApp.
         </p>
 
-        <!-- Simple: mailto (sans serveur). Remplace l'email quand vous l'aurez. -->
         <form action="mailto:contact@kaympnettoyage.fr" method="post" enctype="text/plain">
           <div style="display:grid;gap:10px;">
             <input type="text" name="Nom" placeholder="Votre nom" required>
@@ -74,22 +74,18 @@
             <textarea name="Message" placeholder="Décrivez votre besoin (surface, état, contraintes, délai...)" required></textarea>
 
             <button type="submit" class="btn primary">📩 Envoyer la demande</button>
-            <div class="small">
-              Si le bouton ne marche pas sur mobile : utilisez WhatsApp ci-dessous.
-            </div>
+            <div class="small">Si le bouton ne marche pas : utilisez WhatsApp.</div>
           </div>
         </form>
 
         <div style="height:12px;"></div>
-
         <div class="notice">
-          <strong>WhatsApp recommandé :</strong> envoyez 2–3 photos + surface + ville, on vous répond vite.
+          <strong>WhatsApp recommandé :</strong> envoyez 2–3 photos + surface + ville, réponse rapide.
           <div style="height:10px;"></div>
           <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 Ouvrir WhatsApp</a>
         </div>
       </section>
 
-      <!-- INFOS -->
       <aside class="card">
         <h2 style="margin:0 0 10px;">Coordonnées</h2>
 
@@ -119,8 +115,7 @@
 
         <div style="height:12px;"></div>
         <div class="notice">
-          <strong>Email :</strong> si vous n’avez pas encore d’adresse pro,
-          vous pouvez en créer une (ex : contact@kaympnettoyage.fr).
+          <strong>Email :</strong> remplace l’adresse du formulaire si vous avez un email différent.
         </div>
       </aside>
     </div>
@@ -136,6 +131,19 @@
 
 <script>
   document.getElementById("y").textContent = new Date().getFullYear();
+
+  function toggleMenu(){
+    document.getElementById("navMenu").classList.toggle("show");
+  }
+
+  // Fermer le menu si on clique en dehors (mobile)
+  document.addEventListener("click", (e) => {
+    const menu = document.getElementById("navMenu");
+    const burger = document.querySelector(".hamburger");
+    if (!menu || !burger) return;
+    const clickedInside = menu.contains(e.target) || burger.contains(e.target);
+    if (!clickedInside) menu.classList.remove("show");
+  });
 </script>
 
 </body>
