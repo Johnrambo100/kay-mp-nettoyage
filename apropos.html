@@ -1,26 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>À Propos | Kay MP Nettoyage</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À propos | KAY MP Nettoyage</title>
+  <meta name="description" content="KAY MP Nettoyage : entreprise de nettoyage à Montauban. Spécialiste fin de chantier, remise en état et prestations sur-mesure." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <nav>
-        <div class="logo">Kay MP</div>
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="apropos.html">À Propos</a></li>
-            <li><a href="realisations.html">Réalisations</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <h1>L'histoire de Kay MP Nettoyage</h1>
-        <p>Fondée sur des valeurs de rigueur et de proximité, Kay MP Nettoyage accompagne les entreprises dans la gestion de leur hygiène quotidienne.</p>
-        <p>Notre mission : Transformer votre environnement de travail en un lieu sain et productif.</p>
+
+<header class="topbar">
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <div class="logo">KM</div>
+        <div>KAY MP <span class="small">Nettoyage</span></div>
+      </a>
+      <nav class="navlinks">
+        <a href="services.html">Services</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="apropos.html">À propos</a>
+        <a href="contact.html" class="btn primary">Demander un devis</a>
+      </nav>
     </div>
-    <footer><p>&copy; 2026 Kay MP Nettoyage</p></footer>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="hcard">
+      <h1 class="h1" style="font-size:clamp(26px,3.2vw,38px);margin-bottom:10px;">À propos</h1>
+      <p class="lead" style="margin:0;">
+        KAY MP Nettoyage intervient en <strong>Occitanie</strong>, principalement <strong>Montauban & alentours</strong>.
+        Notre objectif : un résultat <strong>impeccable</strong> et des clients <strong>rassurés</strong>.
+      </p>
+    </div>
+
+    <div style="height:18px;"></div>
+
+    <div class="split">
+      <div class="card">
+        <div class="icon">✅</div>
+        <h3>Travail soigné</h3>
+        <p>Finitions propres et contrôle final. On ne bâcle pas : surtout sur la fin de chantier.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🤝</div>
+        <h3>Confiance</h3>
+        <p>Devis clair, communication simple, respect des délais.</p>
+      </div>
+    </div>
+
+    <div style="height:14px;"></div>
+
+    <div class="split">
+      <div class="card">
+        <div class="icon">🧴</div>
+        <h3>Produits adaptés</h3>
+        <p>Utilisation de produits efficaces et adaptés aux surfaces (sols, vitres, sanitaires, etc.).</p>
+      </div>
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Réactivité</h3>
+        <p>Besoin urgent ? Photo + adresse sur WhatsApp, on répond rapidement.</p>
+      </div>
+    </div>
+
+    <div style="height:18px;"></div>
+
+    <div class="hcard">
+      <h2 style="margin:0 0 10px;">Vous êtes un pro du bâtiment ?</h2>
+      <p class="small" style="margin:0 0 14px;">
+        Si vous avez des chantiers à livrer, on peut intervenir en fin de travaux pour une remise en état rapide et propre.
+      </p>
+      <div class="btnrow">
+        <a class="btn primary" href="contact.html">📩 Demander un devis</a>
+        <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a class="btn" href="tel:+33644972892">📞 06 44 97 28 92</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>© <span id="y"></span> KAY MP Nettoyage.</div>
+  </div>
+</footer>
+
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>
