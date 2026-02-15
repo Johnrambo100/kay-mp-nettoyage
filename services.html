@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | KAY MP Nettoyage</title>
-  <meta name="description" content="Services de nettoyage : fin de chantier, remise en état, bureaux, vitres, logements, locaux professionnels à Montauban et en Occitanie." />
+  <meta name="description" content="Services : nettoyage fin de chantier, remise en état, vitres, bureaux, logements. Montauban & Occitanie." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,11 +16,12 @@
         <div class="logo">KM</div>
         <div>KAY MP <span class="small">Nettoyage</span></div>
       </a>
-      <nav class="navlinks">
+      <button class="hamburger" type="button" onclick="toggleMenu()" aria-label="Menu">☰</button>
+      <nav class="navlinks" id="navMenu">
         <a href="services.html">Services</a>
         <a href="realisations.html">Réalisations</a>
         <a href="apropos.html">À propos</a>
-        <a href="contact.html" class="btn primary">Demander un devis</a>
+        <a href="contact.html" class="btn primary">Devis gratuit</a>
       </nav>
     </div>
   </div>
@@ -28,12 +29,14 @@
 
 <main class="section">
   <div class="container">
-    <div class="hcard">
-      <h1 class="h1" style="font-size:clamp(26px,3.2vw,38px);margin-bottom:10px;">Nos services</h1>
+
+    <div class="card">
+      <h1 class="h1" style="font-size:clamp(26px,3.2vw,40px);margin-bottom:10px;">Nos services</h1>
       <p class="lead" style="margin:0;">
-        Intervention en <strong>Occitanie</strong>, principalement <strong>Montauban & alentours</strong>.
+        Intervention en <strong>Occitanie</strong> — <strong>Montauban & alentours</strong>.
         Spécialité : <strong>nettoyage fin de chantier</strong>.
       </p>
+
       <div style="height:14px;"></div>
       <div class="btnrow">
         <a class="btn primary" href="contact.html">📩 Devis gratuit</a>
@@ -45,73 +48,76 @@
     <div style="height:18px;"></div>
 
     <div class="cards">
-      <div class="card">
+      <div class="service">
         <div class="icon">🏗</div>
         <h3>Nettoyage fin de chantier</h3>
-        <p>Dépoussiérage complet, traces de peinture/plâtre, sols, vitres, sanitaires, cuisine : remise en état prête à livrer.</p>
+        <p>Dépoussiérage, sols, vitres, sanitaires, cuisine : remise en état prête à livrer.</p>
       </div>
 
-      <div class="card">
+      <div class="service">
         <div class="icon">🧼</div>
         <h3>Remise en état</h3>
-        <p>Après travaux, déménagement ou location : nettoyage approfondi pour retrouver un intérieur propre et sain.</p>
+        <p>Après travaux, déménagement ou location : nettoyage approfondi et soigné.</p>
       </div>
 
-      <div class="card">
-        <div class="icon">🏢</div>
-        <h3>Bureaux & locaux</h3>
-        <p>Entretien régulier ou ponctuel : zones d’accueil, bureaux, sanitaires, sols, poubelles, vitres intérieures.</p>
-      </div>
-
-      <div class="card">
+      <div class="service">
         <div class="icon">🪟</div>
         <h3>Vitres & vitrines</h3>
-        <p>Fenêtres, baies vitrées, vitrines, vérandas. Résultat net, sans traces.</p>
+        <p>Fenêtres, baies vitrées, vitrines : résultat net, sans traces.</p>
       </div>
 
-      <div class="card">
+      <div class="service">
+        <div class="icon">🏢</div>
+        <h3>Bureaux & locaux</h3>
+        <p>Entretien ponctuel ou régulier : zones d’accueil, bureaux, sanitaires, sols.</p>
+      </div>
+
+      <div class="service">
         <div class="icon">🏠</div>
-        <h3>Logements & parties communes</h3>
-        <p>Maisons, appartements, cages d’escaliers et entrées : nettoyage adapté selon l’état et les surfaces.</p>
+        <h3>Logements</h3>
+        <p>Maisons, appartements : nettoyage complet selon l’état du logement.</p>
       </div>
 
-      <div class="card">
+      <div class="service">
         <div class="icon">✨</div>
-        <h3>Prestations sur-mesure</h3>
-        <p>Chaque chantier est différent : on s’adapte à votre besoin, vos délais, et vos contraintes.</p>
+        <h3>Sur-mesure</h3>
+        <p>Chaque chantier est différent : on s’adapte à votre besoin et vos délais.</p>
       </div>
     </div>
 
     <div style="height:18px;"></div>
 
-    <div class="hcard">
+    <section class="card">
       <h2 style="margin:0 0 10px;">Comment ça se passe ?</h2>
       <div class="split">
-        <div class="card">
+        <div class="service">
           <div class="icon">1</div>
           <h3>Demande</h3>
-          <p>Vous expliquez le besoin (surface, type de local, urgence). Photos recommandées.</p>
+          <p>Vous envoyez les infos (photos si possible) + surface + ville.</p>
         </div>
-        <div class="card">
+        <div class="service">
           <div class="icon">2</div>
           <h3>Devis</h3>
-          <p>Devis clair et rapide. On valide la date d’intervention ensemble.</p>
+          <p>Devis clair et rapide. On planifie l’intervention.</p>
         </div>
       </div>
+
       <div style="height:12px;"></div>
+
       <div class="split">
-        <div class="card">
+        <div class="service">
           <div class="icon">3</div>
           <h3>Intervention</h3>
           <p>Nettoyage soigné, produits adaptés, finitions propres.</p>
         </div>
-        <div class="card">
+        <div class="service">
           <div class="icon">4</div>
           <h3>Contrôle</h3>
-          <p>Vérification finale avec vous. Objectif : résultat impeccable.</p>
+          <p>Vérification finale : objectif “prêt à livrer”.</p>
         </div>
       </div>
-    </div>
+    </section>
+
   </div>
 </main>
 
@@ -121,6 +127,20 @@
   </div>
 </footer>
 
-<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+<script>
+  function toggleMenu(){
+    document.getElementById("navMenu").classList.toggle("show");
+  }
+  document.addEventListener("click", (e) => {
+    const menu = document.getElementById("navMenu");
+    const burger = document.querySelector(".hamburger");
+    if (!menu || !burger) return;
+    const clickedInside = menu.contains(e.target) || burger.contains(e.target);
+    if (!clickedInside) menu.classList.remove("show");
+  });
+  const y = document.getElementById("y");
+  if (y) y.textContent = new Date().getFullYear();
+</script>
+
 </body>
-                                            </html>
+</html>
