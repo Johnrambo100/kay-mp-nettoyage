@@ -16,7 +16,9 @@
         <div class="logo">KM</div>
         <div>KAY MP <span class="small">Nettoyage</span></div>
       </a>
+
       <button class="hamburger" type="button" onclick="toggleMenu()" aria-label="Menu">☰</button>
+
       <nav class="navlinks" id="navMenu">
         <a href="services.html">Services</a>
         <a href="realisations.html">Réalisations</a>
@@ -69,10 +71,18 @@
             <input type="text" name="Ville" placeholder="Ville (ex : Montauban)" required>
             <input type="text" name="Prestation" placeholder="Prestation (ex : fin de chantier)" required>
             <textarea name="Message" placeholder="Décrivez votre besoin (surface, état, contraintes, délai...)" required></textarea>
+
             <button type="submit" class="btn primary">📩 Envoyer</button>
             <div class="small">Si ça ne s’ouvre pas : WhatsApp est le plus fiable.</div>
           </div>
         </form>
+
+        <div style="height:12px;"></div>
+        <div class="notice">
+          <strong>WhatsApp recommandé :</strong> envoyez 2–3 photos + surface + ville → réponse rapide.
+          <div style="height:10px;"></div>
+          <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 Ouvrir WhatsApp</a>
+        </div>
       </section>
 
       <aside class="card">
@@ -116,6 +126,7 @@
   function toggleMenu(){
     document.getElementById("navMenu").classList.toggle("show");
   }
+
   document.addEventListener("click", (e) => {
     const menu = document.getElementById("navMenu");
     const burger = document.querySelector(".hamburger");
@@ -123,9 +134,10 @@
     const clickedInside = menu.contains(e.target) || burger.contains(e.target);
     if (!clickedInside) menu.classList.remove("show");
   });
+
   const y = document.getElementById("y");
   if (y) y.textContent = new Date().getFullYear();
 </script>
 
 </body>
-                                                          </html>
+      </html>
