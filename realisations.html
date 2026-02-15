@@ -4,63 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Réalisations | KAY MP Nettoyage</title>
-  <meta name="description" content="Réalisations KAY MP Nettoyage : nettoyage intérieur, fin de chantier, remise en état et élagage après tempête. Montauban & Occitanie." />
-  <link rel="stylesheet" href="style.css" />
-
-  <style>
-    .gallery{
-      display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap:12px;
-    }
-    @media (max-width: 900px){
-      .gallery{ grid-template-columns: repeat(2, 1fr); }
-    }
-    .shot{
-      position:relative;
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      overflow:hidden;
-      background:#fff;
-      box-shadow: 0 16px 40px rgba(15,23,42,.06);
-    }
-    .shot img{
-      width:100%;
-      height:220px;
-      object-fit:cover;
-      display:block;
-    }
-    .cap{
-      position:absolute;
-      left:10px; bottom:10px;
-      background: rgba(255,255,255,.92);
-      border:1px solid rgba(226,232,240,.9);
-      padding:7px 10px;
-      border-radius:999px;
-      font-size:.92rem;
-      color: var(--muted);
-      box-shadow: 0 10px 25px rgba(15,23,42,.08);
-    }
-  </style>
+  <meta name="description" content="Galerie : nettoyage intérieur (14 photos) + élagage après tempête (12 photos). Cliquez pour agrandir." />
+  <link rel="icon" href="images/logo.jpg">
+  <link rel="stylesheet" href="style.css?v=99" />
 </head>
-
 <body>
+<div class="ambient"></div>
 
 <header class="topbar">
   <div class="container">
     <div class="nav">
       <a class="brand" href="index.html">
-        <div class="logo">KM</div>
-        <div>KAY MP <span class="small">Nettoyage</span></div>
+        <img src="images/logo.jpg" alt="Logo" class="logo-img">
+        <div class="name"><strong>KAY MP Nettoyage</strong><span>Réalisations</span></div>
       </a>
 
-      <button class="hamburger" type="button" onclick="toggleMenu()">☰</button>
+      <button class="hamburger" aria-label="Ouvrir le menu">
+        <div class="bars"><span></span><span></span><span></span></div>
+      </button>
 
       <nav class="navlinks" id="navMenu">
         <a href="services.html">Services</a>
         <a href="realisations.html">Réalisations</a>
         <a href="apropos.html">À propos</a>
-        <a href="contact.html" class="btn primary">Devis gratuit</a>
+        <a class="btn hot" href="contact.html">Devis express</a>
       </nav>
     </div>
   </div>
@@ -69,99 +36,101 @@
 <main class="section">
   <div class="container">
 
-    <!-- INTRO -->
     <section class="card">
-      <h1 class="h1">Réalisations</h1>
-      <p class="lead">
-        Exemples de prestations réalisées en <strong>Occitanie</strong>,
-        principalement <strong>Montauban & alentours</strong>.
-      </p>
-    </section>
-
-    <div style="height:18px;"></div>
-
-    <!-- INTERIEUR -->
-    <section class="card">
-      <h2>🏠 Nettoyage intérieur — Fin de chantier / Remise en état</h2>
-
-      <p class="small">
-        Nettoyage approfondi après travaux, déménagement ou remise en état.
-      </p>
-
-      <div class="gallery">
-        <div class="shot"><img src="images/int-01.jpg"><div class="cap">🏗 Fin de chantier</div></div>
-        <div class="shot"><img src="images/int-02.jpg"><div class="cap">🏗 Fin de chantier</div></div>
-        <div class="shot"><img src="images/int-03.jpg"><div class="cap">🧼 Remise en état</div></div>
-        <div class="shot"><img src="images/int-04.jpg"><div class="cap">🧼 Remise en état</div></div>
-
-        <div class="shot"><img src="images/int-05.jpg"><div class="cap">🪟 Vitres</div></div>
-        <div class="shot"><img src="images/int-06.jpg"><div class="cap">🪟 Vitres</div></div>
-        <div class="shot"><img src="images/int-07.jpg"><div class="cap">🏗 Chantier</div></div>
-        <div class="shot"><img src="images/int-08.jpg"><div class="cap">🏗 Chantier</div></div>
-
-        <div class="shot"><img src="images/int-09.jpg"><div class="cap">🧼 Nettoyage</div></div>
-        <div class="shot"><img src="images/int-10.jpg"><div class="cap">🧼 Nettoyage</div></div>
-        <div class="shot"><img src="images/int-11.jpg"><div class="cap">🪟 Vitres</div></div>
-        <div class="shot"><img src="images/int-12.jpg"><div class="cap">🏗 Chantier</div></div>
-
-        <div class="shot"><img src="images/int-13.jpg"><div class="cap">✨ Résultat</div></div>
-        <div class="shot"><img src="images/int-14.jpg"><div class="cap">✨ Résultat</div></div>
+      <h1 class="h1" style="font-size:clamp(30px,3.6vw,52px)">Réalisations</h1>
+      <p class="lead">Clique sur une photo pour l’agrandir (navigation ← →, Échap).</p>
+      <div class="btnrow">
+        <a class="btn hot" href="contact.html">🚀 Devis express</a>
+        <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a class="btn" href="tel:+33644972892">📞 Appeler</a>
       </div>
     </section>
 
-    <div style="height:18px;"></div>
+    <div style="height:18px"></div>
 
-    <!-- EXTERIEUR -->
     <section class="card">
-      <h2>🌳 Élagage extérieur — Après tempête</h2>
-
-      <p class="lead">
-        Intervention suite à intempéries : sécurisation, coupe et nettoyage du site.
-      </p>
+      <h2 class="h2">🏠 Nettoyage intérieur</h2>
+      <p class="small">Fin de chantier / remise en état — 14 photos</p>
 
       <div class="gallery">
-        <div class="shot"><img src="images/ext-01.jpg"><div class="cap">🌳 Intervention</div></div>
-        <div class="shot"><img src="images/ext-02.jpg"><div class="cap">🌳 Intervention</div></div>
-        <div class="shot"><img src="images/ext-03.jpg"><div class="cap">🌳 Coupe</div></div>
-        <div class="shot"><img src="images/ext-04.jpg"><div class="cap">🌳 Coupe</div></div>
+        <!-- int-01 à int-14 -->
+        <div class="shot" data-shot data-full="images/int-01.jpg" data-title="Intérieur 01"><img loading="lazy" src="images/int-01.jpg" alt="Intérieur 01"><div class="cap">Intérieur</div></div>
+        <div class="shot" data-shot data-full="images/int-02.jpg" data-title="Intérieur 02"><img loading="lazy" src="images/int-02.jpg" alt="Intérieur 02"><div class="cap">Intérieur</div></div>
+        <div class="shot" data-shot data-full="images/int-03.jpg" data-title="Intérieur 03"><img loading="lazy" src="images/int-03.jpg" alt="Intérieur 03"><div class="cap">Intérieur</div></div>
+        <div class="shot" data-shot data-full="images/int-04.jpg" data-title="Intérieur 04"><img loading="lazy" src="images/int-04.jpg" alt="Intérieur 04"><div class="cap">Intérieur</div></div>
 
-        <div class="shot"><img src="images/ext-05.jpg"><div class="cap">⚠ Sécurisation</div></div>
-        <div class="shot"><img src="images/ext-06.jpg"><div class="cap">⚠ Sécurisation</div></div>
-        <div class="shot"><img src="images/ext-07.jpg"><div class="cap">🧹 Nettoyage</div></div>
-        <div class="shot"><img src="images/ext-08.jpg"><div class="cap">🧹 Nettoyage</div></div>
+        <div class="shot" data-shot data-full="images/int-05.jpg" data-title="Intérieur 05"><img loading="lazy" src="images/int-05.jpg" alt="Intérieur 05"><div class="cap">Intérieur</div></div>
+        <div class="shot" data-shot data-full="images/int-06.jpg" data-title="Intérieur 06"><img loading="lazy" src="images/int-06.jpg" alt="Intérieur 06"><div class="cap">Intérieur</div></div>
+        <div class="shot" data-shot data-full="images/int-07.jpg" data-title="Intérieur 07"><img loading="lazy" src="images/int-07.jpg" alt="Intérieur 07"><div class="cap">Intérieur</div></div>
+        <div class="shot" data-shot data-full="images/int-08.jpg" data-title="Intérieur 08"><img loading="lazy" src="images/int-08.jpg" alt="Intérieur 08"><div class="cap">Intérieur</div></div>
 
-        <div class="shot"><img src="images/ext-09.jpg"><div class="cap">🌿 Résultat</div></div>
-        <div class="shot"><img src="images/ext-10.jpg"><div class="cap">🌿 Résultat</div></div>
-        <div class="shot"><img src="images/ext-11.jpg"><div class="cap">🌿 Résultat</div></div>
-        <div class="shot"><img src="images/ext-12.jpg"><div class="cap">🌿 Résultat</div></div>
+        <div class="shot" data-shot data-full="images/int-09.jpg" data-title="Intérieur 09"><img loading="lazy" src="images/int-09.jpg" alt="Intérieur 09"><div class="cap">Intérieur</div></div>
+        <div class="shot" data-shot data-full="images/int-10.jpg" data-title="Intérieur 10"><img loading="lazy" src="images/int-10.jpg" alt="Intérieur 10"><div class="cap">Intérieur</div></div>
+        <div class="shot" data-shot data-full="images/int-11.jpg" data-title="Intérieur 11"><img loading="lazy" src="images/int-11.jpg" alt="Intérieur 11"><div class="cap">Intérieur</div></div>
+        <div class="shot" data-shot data-full="images/int-12.jpg" data-title="Intérieur 12"><img loading="lazy" src="images/int-12.jpg" alt="Intérieur 12"><div class="cap">Intérieur</div></div>
+
+        <div class="shot" data-shot data-full="images/int-13.jpg" data-title="Intérieur 13"><img loading="lazy" src="images/int-13.jpg" alt="Intérieur 13"><div class="cap">Intérieur</div></div>
+        <div class="shot" data-shot data-full="images/int-14.jpg" data-title="Intérieur 14"><img loading="lazy" src="images/int-14.jpg" alt="Intérieur 14"><div class="cap">Intérieur</div></div>
+      </div>
+    </section>
+
+    <div style="height:18px"></div>
+
+    <section class="card">
+      <h2 class="h2">🌳 Élagage après tempête</h2>
+      <p class="lead">Sécurisation • coupe branches dangereuses • nettoyage du site — 12 photos</p>
+      <div class="notice">Astuce : ce type de prestation rassure beaucoup les clients (preuve visuelle).</div>
+
+      <div style="height:12px"></div>
+
+      <div class="gallery">
+        <!-- ext-01 à ext-12 -->
+        <div class="shot" data-shot data-full="images/ext-01.jpg" data-title="Élagage 01"><img loading="lazy" src="images/ext-01.jpg" alt="Élagage 01"><div class="cap">Élagage</div></div>
+        <div class="shot" data-shot data-full="images/ext-02.jpg" data-title="Élagage 02"><img loading="lazy" src="images/ext-02.jpg" alt="Élagage 02"><div class="cap">Élagage</div></div>
+        <div class="shot" data-shot data-full="images/ext-03.jpg" data-title="Élagage 03"><img loading="lazy" src="images/ext-03.jpg" alt="Élagage 03"><div class="cap">Élagage</div></div>
+        <div class="shot" data-shot data-full="images/ext-04.jpg" data-title="Élagage 04"><img loading="lazy" src="images/ext-04.jpg" alt="Élagage 04"><div class="cap">Élagage</div></div>
+
+        <div class="shot" data-shot data-full="images/ext-05.jpg" data-title="Élagage 05"><img loading="lazy" src="images/ext-05.jpg" alt="Élagage 05"><div class="cap">Élagage</div></div>
+        <div class="shot" data-shot data-full="images/ext-06.jpg" data-title="Élagage 06"><img loading="lazy" src="images/ext-06.jpg" alt="Élagage 06"><div class="cap">Élagage</div></div>
+        <div class="shot" data-shot data-full="images/ext-07.jpg" data-title="Élagage 07"><img loading="lazy" src="images/ext-07.jpg" alt="Élagage 07"><div class="cap">Élagage</div></div>
+        <div class="shot" data-shot data-full="images/ext-08.jpg" data-title="Élagage 08"><img loading="lazy" src="images/ext-08.jpg" alt="Élagage 08"><div class="cap">Élagage</div></div>
+
+        <div class="shot" data-shot data-full="images/ext-09.jpg" data-title="Élagage 09"><img loading="lazy" src="images/ext-09.jpg" alt="Élagage 09"><div class="cap">Élagage</div></div>
+        <div class="shot" data-shot data-full="images/ext-10.jpg" data-title="Élagage 10"><img loading="lazy" src="images/ext-10.jpg" alt="Élagage 10"><div class="cap">Élagage</div></div>
+        <div class="shot" data-shot data-full="images/ext-11.jpg" data-title="Élagage 11"><img loading="lazy" src="images/ext-11.jpg" alt="Élagage 11"><div class="cap">Élagage</div></div>
+        <div class="shot" data-shot data-full="images/ext-12.jpg" data-title="Élagage 12"><img loading="lazy" src="images/ext-12.jpg" alt="Élagage 12"><div class="cap">Élagage</div></div>
       </div>
     </section>
 
   </div>
 </main>
 
-<footer class="footer">
-  <div class="container">
-    © <span id="y"></span> KAY MP Nettoyage — Montauban & Occitanie.
+<!-- Lightbox -->
+<div class="lightbox" aria-hidden="true">
+  <div class="frame">
+    <div class="bar">
+      <div data-lb-title>Photo</div>
+      <div class="hint">← → naviguer • Échap fermer</div>
+      <button class="lb-btn" data-lb-close>Fermer ✕</button>
+    </div>
+    <img alt="Aperçu" />
+    <div class="bar" style="justify-content:center;gap:10px">
+      <button class="lb-btn" data-lb-prev>← Précédent</button>
+      <button class="lb-btn" data-lb-next>Suivant →</button>
+    </div>
   </div>
+</div>
+
+<footer class="footer">
+  <div class="container">© <span id="y"></span> KAY MP Nettoyage.</div>
 </footer>
 
-<script>
-  function toggleMenu(){
-    document.getElementById("navMenu").classList.toggle("show");
-  }
+<div class="cta-bar">
+  <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 WhatsApp</a>
+  <a class="btn hot" href="contact.html">🚀 Devis</a>
+  <a class="btn" href="tel:+33644972892">📞 Appeler</a>
+</div>
 
-  document.addEventListener("click", (e) => {
-    const menu = document.getElementById("navMenu");
-    const burger = document.querySelector(".hamburger");
-    if (!menu || !burger) return;
-    if (!menu.contains(e.target) && !burger.contains(e.target)){
-      menu.classList.remove("show");
-    }
-  });
-
-  document.getElementById("y").textContent = new Date().getFullYear();
-</script>
-
+<script src="app.js?v=99" defer></script>
 </body>
-</html>
+  </html>
