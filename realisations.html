@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -64,9 +64,7 @@
         <div class="logo">KM</div>
         <div>KAY MP <span class="small">Nettoyage</span></div>
       </a>
-
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
-
+      <button class="hamburger" type="button" onclick="toggleMenu()" aria-label="Menu">☰</button>
       <nav class="navlinks" id="navMenu">
         <a href="services.html">Services</a>
         <a href="realisations.html">Réalisations</a>
@@ -83,7 +81,7 @@
     <div class="card">
       <h1 class="h1" style="font-size:clamp(26px,3.2vw,40px);margin-bottom:10px;">Réalisations</h1>
       <p class="lead" style="margin:0;">
-        Exemples de chantiers (spécialité : <strong>fin de chantier</strong>) — <strong>Montauban & alentours</strong>.
+        Exemples de chantiers réalisés (spécialité : <strong>fin de chantier</strong>) — <strong>Montauban & alentours</strong>.
       </p>
 
       <div style="height:14px;"></div>
@@ -95,7 +93,7 @@
 
       <div style="height:14px;"></div>
       <div class="notice">
-        <strong>Conseil :</strong> remplace les images par les tiennes dans le dossier <strong>images/</strong>.
+        <strong>Important :</strong> ajoute tes photos dans un dossier <strong>images/</strong> et remplace les noms ci-dessous.
       </div>
     </div>
 
@@ -130,6 +128,11 @@
           </div>
         </div>
       </div>
+
+      <div style="height:12px;"></div>
+      <div class="notice">
+        Si tu n’as pas encore de photos : laisse comme ça, ça s’affiche quand même (mais ajoute des photos dès que possible).
+      </div>
     </section>
 
     <div style="height:18px;"></div>
@@ -158,11 +161,6 @@
           <div class="cap">🏢 Bureaux</div>
         </div>
       </div>
-
-      <div style="height:14px;"></div>
-      <div class="notice">
-        Si tu veux, je te prépare une version “portfolio” avec titres de chantiers (ex : “Maison – Montauban”).
-      </div>
     </section>
 
     <div style="height:18px;"></div>
@@ -189,12 +187,9 @@
 </footer>
 
 <script>
-  document.getElementById("y").textContent = new Date().getFullYear();
-
   function toggleMenu(){
     document.getElementById("navMenu").classList.toggle("show");
   }
-
   document.addEventListener("click", (e) => {
     const menu = document.getElementById("navMenu");
     const burger = document.querySelector(".hamburger");
@@ -202,7 +197,9 @@
     const clickedInside = menu.contains(e.target) || burger.contains(e.target);
     if (!clickedInside) menu.classList.remove("show");
   });
+  const y = document.getElementById("y");
+  if (y) y.textContent = new Date().getFullYear();
 </script>
 
 </body>
-          </html>
+       </html>
