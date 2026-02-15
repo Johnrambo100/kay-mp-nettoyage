@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact & Devis | KAY MP Nettoyage</title>
-  <meta name="description" content="Contactez KAY MP Nettoyage à Montauban : devis gratuit, WhatsApp, téléphone. Spécialiste fin de chantier et remise en état." />
+  <meta name="description" content="Contactez KAY MP Nettoyage à Montauban : devis gratuit, WhatsApp, téléphone. Fin de chantier et remise en état." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,9 +16,7 @@
         <div class="logo">KM</div>
         <div>KAY MP <span class="small">Nettoyage</span></div>
       </a>
-
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
-
+      <button class="hamburger" type="button" onclick="toggleMenu()" aria-label="Menu">☰</button>
       <nav class="navlinks" id="navMenu">
         <a href="services.html">Services</a>
         <a href="realisations.html">Réalisations</a>
@@ -43,7 +41,6 @@
       <div class="btnrow">
         <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 WhatsApp : 06 44 97 28 92</a>
         <a class="btn" href="tel:+33644972892">📞 Appeler</a>
-        <a class="btn primary" href="#form">📩 Envoyer une demande</a>
       </div>
 
       <div style="height:14px;"></div>
@@ -52,17 +49,17 @@
         • Type de nettoyage (fin de chantier, vitres, logement...)<br/>
         • Surface (approximative) et état des lieux<br/>
         • Ville / accès / étage (si besoin)<br/>
-        • Délai souhaité (urgent ou non)
+        • Délai souhaité
       </div>
     </div>
 
     <div style="height:18px;"></div>
 
     <div class="split">
-      <section class="card" id="form">
-        <h2 style="margin:0 0 10px;">Formulaire de demande</h2>
+      <section class="card">
+        <h2 style="margin:0 0 10px;">Demande de devis (simple)</h2>
         <p class="small" style="margin:0 0 14px;">
-          Ce formulaire ouvre votre application mail. Le plus fiable reste WhatsApp.
+          Le bouton ci-dessous ouvre votre application mail. Si ça ne marche pas, utilisez WhatsApp.
         </p>
 
         <form action="mailto:contact@kaympnettoyage.fr" method="post" enctype="text/plain">
@@ -72,18 +69,10 @@
             <input type="text" name="Ville" placeholder="Ville (ex : Montauban)" required>
             <input type="text" name="Prestation" placeholder="Prestation (ex : fin de chantier)" required>
             <textarea name="Message" placeholder="Décrivez votre besoin (surface, état, contraintes, délai...)" required></textarea>
-
-            <button type="submit" class="btn primary">📩 Envoyer la demande</button>
-            <div class="small">Si le bouton ne marche pas : utilisez WhatsApp.</div>
+            <button type="submit" class="btn primary">📩 Envoyer</button>
+            <div class="small">Si ça ne s’ouvre pas : WhatsApp est le plus fiable.</div>
           </div>
         </form>
-
-        <div style="height:12px;"></div>
-        <div class="notice">
-          <strong>WhatsApp recommandé :</strong> envoyez 2–3 photos + surface + ville, réponse rapide.
-          <div style="height:10px;"></div>
-          <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 Ouvrir WhatsApp</a>
-        </div>
       </section>
 
       <aside class="card">
@@ -101,21 +90,15 @@
           <p><a href="https://wa.me/33644972892" target="_blank" rel="noopener">Écrire sur WhatsApp</a></p>
         </div>
 
-        <div class="service" style="margin-bottom:12px;">
+        <div class="service">
           <div class="icon">📍</div>
           <h3>Zone</h3>
           <p>Occitanie — Montauban & alentours</p>
         </div>
 
-        <div class="service">
-          <div class="icon">🏗</div>
-          <h3>Spécialité</h3>
-          <p>Nettoyage fin de chantier + tous types de nettoyage</p>
-        </div>
-
         <div style="height:12px;"></div>
         <div class="notice">
-          <strong>Email :</strong> remplace l’adresse du formulaire si vous avez un email différent.
+          <strong>Astuce :</strong> envoyez 2–3 photos + surface + ville → réponse rapide.
         </div>
       </aside>
     </div>
@@ -130,13 +113,9 @@
 </footer>
 
 <script>
-  document.getElementById("y").textContent = new Date().getFullYear();
-
   function toggleMenu(){
     document.getElementById("navMenu").classList.toggle("show");
   }
-
-  // Fermer le menu si on clique en dehors (mobile)
   document.addEventListener("click", (e) => {
     const menu = document.getElementById("navMenu");
     const burger = document.querySelector(".hamburger");
@@ -144,7 +123,9 @@
     const clickedInside = menu.contains(e.target) || burger.contains(e.target);
     if (!clickedInside) menu.classList.remove("show");
   });
+  const y = document.getElementById("y");
+  if (y) y.textContent = new Date().getFullYear();
 </script>
 
 </body>
-</html>
+                                                          </html>
