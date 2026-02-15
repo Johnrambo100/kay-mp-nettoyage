@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -7,39 +7,54 @@
   <meta name="description" content="KAY MP Nettoyage : nettoyage fin de chantier, remise en état, bureaux, vitres. Intervention en Occitanie (Montauban & alentours). Devis gratuit." />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
 <header class="topbar">
   <div class="container">
     <div class="nav">
+
       <a class="brand" href="index.html">
         <div class="logo">KM</div>
         <div>KAY MP <span class="small">Nettoyage</span></div>
       </a>
 
-      <nav class="navlinks">
+      <!-- Bouton hamburger (mobile) -->
+      <button class="hamburger" type="button" onclick="toggleMenu()" aria-label="Menu">
+        ☰
+      </button>
+
+      <nav class="navlinks" id="navMenu">
         <a href="services.html">Services</a>
         <a href="realisations.html">Réalisations</a>
         <a href="apropos.html">À propos</a>
         <a href="contact.html" class="btn primary">Devis gratuit</a>
       </nav>
+
     </div>
   </div>
 </header>
 
 <main class="hero">
   <div class="container">
-    <div class="grid">
+    <div class="split">
+
       <section class="card">
-        <h1 class="h1">Nettoyage fin de chantier<br/>et remise en état impeccable.</h1>
+        <h1 class="h1">
+          Nettoyage fin de chantier<br/>
+          et remise en état impeccable.
+        </h1>
+
         <p class="lead">
-          Intervention en <strong>Occitanie</strong>, principalement <strong>Montauban & alentours</strong>.
-          Un résultat <strong>propre</strong>, <strong>net</strong> et <strong>soigné</strong> — prêt à livrer.
+          Intervention en <strong>Occitanie</strong>, principalement
+          <strong>Montauban & alentours</strong>.
+          Un résultat <strong>propre</strong>, <strong>net</strong> et
+          <strong>soigné</strong> — prêt à livrer.
         </p>
 
         <div class="btnrow">
           <a class="btn primary" href="contact.html">📩 Demander un devis</a>
-          <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 WhatsApp</a>
+          <a class="btn success" href="https://wa.me/33644972892" target="_blank">💬 WhatsApp</a>
           <a class="btn" href="tel:+33644972892">📞 06 44 97 28 92</a>
         </div>
 
@@ -49,33 +64,36 @@
           <span class="badge">✅ Particuliers & pros</span>
         </div>
 
-        <div style="height:14px"></div>
+        <div style="height:14px;"></div>
+
         <div class="notice">
-          <strong>Astuce devis rapide :</strong> envoyez une photo + surface + ville sur WhatsApp.
+          <strong>Astuce devis rapide :</strong><br/>
+          Envoyez une photo + surface + ville sur WhatsApp.
         </div>
       </section>
 
       <aside class="card">
-        <h2 style="margin:0 0 10px;">Prestations principales</h2>
+        <h2 style="margin-top:0;">Prestations principales</h2>
 
         <div class="service" style="margin-bottom:12px;">
           <div class="icon">🏗</div>
           <h3>Fin de chantier</h3>
-          <p>Retrait poussières, traces, sols, vitres, sanitaires : remise en état complète.</p>
+          <p>Retrait poussières, traces, sols, vitres, sanitaires.</p>
         </div>
 
         <div class="service" style="margin-bottom:12px;">
           <div class="icon">🧼</div>
           <h3>Remise en état</h3>
-          <p>Après travaux, déménagement, location : nettoyage approfondi.</p>
+          <p>Après travaux, déménagement ou location.</p>
         </div>
 
         <div class="service">
           <div class="icon">🪟</div>
           <h3>Vitres & vitrines</h3>
-          <p>Fenêtres, baies vitrées, vitrines : résultat net, sans traces.</p>
+          <p>Résultat net, sans traces.</p>
         </div>
       </aside>
+
     </div>
   </div>
 </main>
@@ -83,24 +101,28 @@
 <section class="section">
   <div class="container">
     <h2>Pourquoi KAY MP Nettoyage ?</h2>
-    <p>Simple, clair, efficace : on fait le travail correctement, jusqu’aux finitions.</p>
+    <p>Un service simple, efficace et professionnel.</p>
 
     <div class="cards">
+
       <div class="service">
         <div class="icon">★</div>
         <h3>Qualité</h3>
-        <p>Finitions propres, contrôle final, détails soignés.</p>
+        <p>Finitions propres et contrôle final.</p>
       </div>
+
       <div class="service">
         <div class="icon">⚡</div>
         <h3>Réactivité</h3>
-        <p>Réponse rapide sur WhatsApp pour vos urgences.</p>
+        <p>Réponse rapide sur WhatsApp.</p>
       </div>
+
       <div class="service">
         <div class="icon">🤝</div>
         <h3>Confiance</h3>
-        <p>Devis clair, communication simple, respect des délais.</p>
+        <p>Devis clair et respect des délais.</p>
       </div>
+
     </div>
   </div>
 </section>
@@ -108,13 +130,14 @@
 <section class="section">
   <div class="container">
     <div class="card">
-      <h2 style="margin:0 0 10px;">Besoin d’un devis ?</h2>
-      <p class="small" style="margin:0 0 14px;">
-        Décrivez votre besoin et ajoutez des photos si possible. Réponse rapide.
+      <h2>Besoin d’un devis ?</h2>
+      <p class="small">
+        Décrivez votre besoin et ajoutez des photos si possible.
       </p>
+
       <div class="btnrow">
         <a class="btn primary" href="contact.html">📩 Devis gratuit</a>
-        <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a class="btn success" href="https://wa.me/33644972892">💬 WhatsApp</a>
         <a class="btn" href="tel:+33644972892">📞 Appeler</a>
       </div>
     </div>
@@ -129,6 +152,24 @@
 
 <script>
   document.getElementById("y").textContent = new Date().getFullYear();
+
+  function toggleMenu(){
+    document.getElementById("navMenu").classList.toggle("show");
+  }
+
+  document.addEventListener("click", (e) => {
+    const menu = document.getElementById("navMenu");
+    const burger = document.querySelector(".hamburger");
+
+    if (!menu || !burger) return;
+
+    const clickedInside = menu.contains(e.target) || burger.contains(e.target);
+
+    if (!clickedInside){
+      menu.classList.remove("show");
+    }
+  });
 </script>
+
 </body>
-        </html>
+</html>
