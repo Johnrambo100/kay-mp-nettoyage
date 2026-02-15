@@ -1,13 +1,45 @@
 (() => {
-  // ===== Mobile menu
   const burger = document.querySelector(".hamburger");
   const menu = document.getElementById("navMenu");
+
+  function closeMenu() {
+    if (!menu) return;
+    menu.classList.remove("show");
+    document.body.style.overflow = "";
+    burger?.setAttribute("aria-expanded", "false");
+  }
+
+  function openCloseMenu() {
+    if (!menu) return;
+    const willOpen = !menu.classList.contains("show");
+    menu.classList.toggle("show");
+
+    // bloque le scroll quand menu ouvert (mobile)
+    document.body.style.overflow = willOpen ? "hidden" : "";
+    burger?.setAttribute("aria-expanded", willOpen ? "true" : "false");
+  }
+
+  // ===== Menu mobile
   if (burger && menu) {
-    burger.addEventListener("click", () => menu.classList.toggle("show"));
+    burger.addEventListener("click", (e) => {
+      e.preventDefault();
+      openCloseMenu();
+    });
+
+    // Fermer si on clique en dehors
     document.addEventListener("click", (e) => {
       const inside = menu.contains(e.target) || burger.contains(e.target);
-      if (!inside) menu.classList.remove("show");
+      if (!inside) closeMenu();
     });
+
+    // Fermer dès qu'on clique sur un lien de menu
+    menu.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => closeMenu());
+    });
+
+    // Fermer au chargement + au retour arrière (bfcache)
+    window.addEventListener("pageshow", () => closeMenu());
+    window.addEventListener("load", () => closeMenu());
   }
 
   // ===== Year
@@ -64,23 +96,15 @@
       e.preventDefault();
       const fd = new FormData(waForm);
 
-      const nom = (fd.get("nom") || "").toString().trim();
-      const tel = (fd.get("tel") || "").toString().trim();
-      const ville = (fd.get("ville") || "").toString().trim();
-      const prestation = (fd.get("prestation") || "").toString().trim();
-      const surface = (fd.get("surface") || "").toString().trim();
-      const delai = (fd.get("delai") || "").toString().trim();
-      const details = (fd.get("details") || "").toString().trim();
-
       const msg =
 `Bonjour, je souhaite un devis.
-Nom: ${nom}
-Téléphone: ${tel}
-Ville: ${ville}
-Prestation: ${prestation}
-Surface: ${surface}
-Délai: ${delai}
-Détails: ${details}`;
+Nom: ${(fd.get("nom") || "").toString().trim()}
+Téléphone: ${(fd.get("tel") || "").toString().trim()}
+Ville: ${(fd.get("ville") || "").toString().trim()}
+Prestation: ${(fd.get("prestation") || "").toString().trim()}
+Surface: ${(fd.get("surface") || "").toString().trim()}
+Délai: ${(fd.get("delai") || "").toString().trim()}
+Détails: ${(fd.get("details") || "").toString().trim()}`;
 
       const phone = "33644972892";
       const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
