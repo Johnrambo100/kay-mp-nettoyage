@@ -3,22 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact & Devis | KAY MP Nettoyage</title>
-  <meta name="description" content="Devis rapide : WhatsApp + téléphone. Fin de chantier, remise en état, vitres, extérieur. Montauban & Occitanie." />
+  <title>Contact / Devis | KAY MP Nettoyage</title>
+  <meta name="description" content="Contactez KAY MP Nettoyage à Montauban : devis rapide WhatsApp, téléphone. Fin de chantier, remise en état, extérieur." />
   <link rel="icon" href="images/logo.jpg">
-  <link rel="stylesheet" href="style.css?v=99" />
+  <link rel="stylesheet" href="style.css?v=1" />
 </head>
 <body>
-<div class="ambient"></div>
 
 <header class="topbar">
   <div class="container">
     <div class="nav">
       <a class="brand" href="index.html">
-        <img src="images/logo.jpg" alt="Logo KAY MP Nettoyage" class="logo-img">
+        <img src="images/logo.jpg" alt="Logo KAY MP Nettoyage" class="logo-img" data-logo>
         <div class="name">
           <strong>KAY MP Nettoyage</strong>
-          <span>Propreté • Finitions • Réactivité</span>
+          <span>Contact / Devis</span>
         </div>
       </a>
 
@@ -30,7 +29,7 @@
         <a href="services.html">Services</a>
         <a href="realisations.html">Réalisations</a>
         <a href="apropos.html">À propos</a>
-        <a class="btn hot" href="contact.html">Devis express</a>
+        <a class="btn hot" href="contact.html#devis">Contact / Devis</a>
       </nav>
     </div>
   </div>
@@ -40,65 +39,71 @@
   <div class="container">
 
     <section class="card">
-      <h1 class="h1" style="font-size:clamp(30px,3.6vw,52px)">Contact & devis express</h1>
+      <h1 class="h1" style="margin-bottom:6px">Contact & devis</h1>
       <p class="lead">
-        Le plus rapide : <strong>WhatsApp</strong> (photos + surface + ville). Intervention : <strong>Montauban & Occitanie</strong>.
+        Intervention en <strong>Occitanie</strong>, principalement <strong>Montauban & alentours</strong>.
+        Pour un devis rapide : <strong>WhatsApp</strong> (photos + surface + ville).
       </p>
+
       <div class="btnrow">
-        <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 WhatsApp</a>
-        <a class="btn" href="tel:+33644972892">📞 06 44 97 28 92</a>
+        <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 WhatsApp : 06 44 97 28 92</a>
+        <a class="btn" href="tel:+33644972892">📞 Appeler</a>
       </div>
-      <div style="height:12px"></div>
-      <div class="notice">Remplis le formulaire → ça ouvre WhatsApp avec le message prêt (tu ajoutes ensuite 2–3 photos).</div>
+
+      <div style="height:10px"></div>
+      <div class="notice">
+        <strong>Infos utiles pour le devis :</strong><br>
+        • Type de nettoyage (fin de chantier, vitres, logement, extérieur…)<br>
+        • Surface (approximative) + état<br>
+        • Ville / accès / délai souhaité<br>
+        • Photos (si possible)
+      </div>
     </section>
 
-    <div style="height:18px"></div>
+    <div style="height:14px"></div>
 
     <div class="split">
-      <section class="card">
-        <h2 class="h2">Formulaire devis (WhatsApp auto)</h2>
+      <section class="card" id="devis">
+        <h2 class="h2">Devis express (WhatsApp)</h2>
+        <p class="small">Remplis → ça ouvre automatiquement WhatsApp avec le message prêt.</p>
 
-        <form class="form-grid" data-wa-form>
-          <input name="nom" placeholder="Nom / Entreprise" required>
-          <input name="tel" placeholder="Téléphone" required>
-          <input name="ville" placeholder="Ville (ex : Montauban)" required>
-
-          <select name="prestation" required>
-            <option value="">Choisir une prestation</option>
-            <option>Fin de chantier</option>
-            <option>Remise en état</option>
-            <option>Vitres / vitrines</option>
-            <option>Bureaux / locaux</option>
-            <option>Logement</option>
-            <option>Tonte</option>
-            <option>Élagage / taille</option>
-            <option>Nettoyage extérieur</option>
-            <option>Déchets verts / poubelles</option>
-            <option>Autre</option>
-          </select>
-
-          <input name="surface" placeholder="Surface / détails (ex : 80m²)">
-          <input name="delai" placeholder="Délai souhaité (ex : cette semaine)">
-          <textarea name="details" placeholder="Décrivez votre besoin (accès, étage, état, contraintes...)" required></textarea>
-
-          <button class="btn hot" type="submit">🚀 Ouvrir WhatsApp avec le devis</button>
-          <div class="small">Ensuite, ajoute 2–3 photos dans WhatsApp pour un devis précis.</div>
+        <form data-wa-form>
+          <div style="display:grid;gap:10px;">
+            <input name="nom" type="text" placeholder="Votre nom" required
+                   style="padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;">
+            <input name="tel" type="tel" placeholder="Votre téléphone" required
+                   style="padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;">
+            <input name="ville" type="text" placeholder="Ville (ex : Montauban)" required
+                   style="padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;">
+            <input name="prestation" type="text" placeholder="Prestation (ex : fin de chantier / élagage…)" required
+                   style="padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;">
+            <input name="surface" type="text" placeholder="Surface (approx.)"
+                   style="padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;">
+            <input name="delai" type="text" placeholder="Délai souhaité"
+                   style="padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;">
+            <textarea name="details" placeholder="Détails (état, contraintes, accès, étage…)"
+                      style="min-height:120px;padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;"></textarea>
+            <button type="submit" class="btn hot">🚀 Envoyer sur WhatsApp</button>
+          </div>
         </form>
+
+        <div style="height:10px"></div>
+        <div class="small">Astuce : ajoute 2–3 photos directement dans WhatsApp après l’ouverture.</div>
       </section>
 
       <aside class="card">
         <h2 class="h2">Coordonnées</h2>
 
-        <div class="service" style="margin-bottom:12px">
+        <div class="service" style="margin-bottom:12px;">
           <div class="icon">📞</div>
           <h3>Téléphone</h3>
-          <p><a href="tel:+33644972892"><strong>06 44 97 28 92</strong></a></p>
+          <p><a href="tel:+33644972892">06 44 97 28 92</a></p>
         </div>
 
-        <div class="service" style="margin-bottom:12px">
+        <div class="service" style="margin-bottom:12px;">
           <div class="icon">💬</div>
           <h3>WhatsApp</h3>
-          <p><a href="https://wa.me/33644972892" target="_blank" rel="noopener"><strong>Ouvrir WhatsApp</strong></a></p>
+          <p><a href="https://wa.me/33644972892" target="_blank" rel="noopener">Écrire sur WhatsApp</a></p>
         </div>
 
         <div class="service">
@@ -108,7 +113,10 @@
         </div>
 
         <div style="height:12px"></div>
-        <div class="notice">Réponse rapide : WhatsApp + photos.</div>
+        <div class="notice">
+          <strong>Mail :</strong> si besoin<br>
+          <a href="mailto:contact@kaympnettoyage.fr">contact@kaympnettoyage.fr</a>
+        </div>
       </aside>
     </div>
 
@@ -121,10 +129,15 @@
 
 <div class="cta-bar">
   <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 WhatsApp</a>
-  <a class="btn hot" href="contact.html">🚀 Devis</a>
+  <a class="btn hot" href="#devis">🚀 Devis</a>
   <a class="btn" href="tel:+33644972892">📞 Appeler</a>
 </div>
 
-<script src="app.js?v=99" defer></script>
+<div class="logo-lightbox" id="logoLightbox">
+  <span class="logo-close" id="logoClose">✕</span>
+  <img src="images/logo.jpg" alt="Logo grand format">
+</div>
+
+<script src="app.js?v=1" defer></script>
 </body>
-  </html>
+          </html>
