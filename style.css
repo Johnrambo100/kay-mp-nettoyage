@@ -430,3 +430,6 @@ textarea{min-height:120px;resize:vertical}
   color:var(--muted);
   font-weight:700;
                  }
+.logo-link img {
+  cursor: zoom-in;
+}
