@@ -91,22 +91,27 @@ body::before{
   min-width: 220px;
 }
 
-.brand .logoWrap{
-  width:66px;
-  height:66px;
-  border-radius:18px;
-  background: rgba(255,255,255,.85);
-  border:1px solid var(--stroke);
+.brand .logoWrap {
+  width: 110px;
+  height: 110px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid var(--stroke);
   box-shadow: var(--shadow2);
-  display:grid;
-  place-items:center;
-  overflow:hidden;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
-.brand img.logoImg{
-  width:54px;
-  height:54px;
-  object-fit:contain;
+.brand .logoWrap:hover {
+  transform: scale(1.05);
+}
+
+.brand img.logoImg {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
 }
 
 .brand .title{
