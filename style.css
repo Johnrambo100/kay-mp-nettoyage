@@ -74,12 +74,20 @@ img{max-width:100%;height:auto;display:block}
   font-weight:900;
   letter-spacing:.2px;
 }
-.logo-img{
-  width:46px;height:46px;object-fit:cover;
-  border-radius:16px;
-  background: rgba(255,255,255,.10);
-  border:1px solid rgba(255,255,255,.14);
-  box-shadow: var(--shadow2);
+.logo-img {
+  height: 90px;   /* avant ~45px */
+  width: 90px;
+  object-fit: contain;
+  border-radius: 18px;
+  background: white;
+  padding: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.08);
+}
 }
 .brand .name{display:flex;flex-direction:column;line-height:1.1}
 .brand .name strong{font-size:1.06rem}
