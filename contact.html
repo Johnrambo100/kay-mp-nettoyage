@@ -64,22 +64,53 @@
 
     <div class="split">
       <section class="card">
-        <h2 style="margin:0 0 10px;">Demande par email (option)</h2>
+        <h2 style="margin:0 0 10px;">Demande par formulaire (recommandé)</h2>
         <p class="small" style="margin:0 0 14px;">
-          Le bouton ouvre votre appli mail. Si ça ne marche pas : WhatsApp est le plus fiable.
+          Ce formulaire envoie directement votre demande à <strong>contact@kaympnettoyage.fr</strong>.
+          (Ne dépend plus de votre appli mail.)
         </p>
 
-        <form action="mailto:contact@kaympnettoyage.fr" method="post" enctype="text/plain">
+        <!-- ✅ Formspree -->
+        <form action="https://formspree.io/f/xojnwebe" method="POST">
           <div style="display:grid;gap:10px;">
+
             <input type="text" name="Nom" placeholder="Votre nom" required>
             <input type="tel" name="Téléphone" placeholder="Votre téléphone" required>
             <input type="text" name="Ville" placeholder="Ville (ex : Montauban)" required>
-            <input type="text" name="Prestation" placeholder="Prestation (ex : fin de chantier / tonte)" required>
+
+            <select name="Prestation" required>
+              <option value="" disabled selected>Choisir la prestation</option>
+              <option>Fin de chantier</option>
+              <option>Remise en état</option>
+              <option>Vitres / vitrines</option>
+              <option>Bureaux / locaux</option>
+              <option>Logement / état des lieux</option>
+              <option>Extérieur : tonte</option>
+              <option>Extérieur : élagage</option>
+              <option>Extérieur : évacuation / déchets</option>
+              <option>Autre</option>
+            </select>
+
             <textarea name="Message" placeholder="Décrivez votre besoin (surface, état, contraintes, délai...)" required></textarea>
+
+            <!-- Anti-spam invisible -->
+            <input type="text" name="_gotcha" style="display:none">
+
+            <!-- Sujet mail -->
+            <input type="hidden" name="_subject" value="Nouvelle demande depuis kaympnettoyage.fr" />
+
+            <!-- Option : redirection après envoi (tu peux changer la page si tu veux) -->
+            <input type="hidden" name="_next" value="contact.html?sent=1" />
+
             <button type="submit" class="btn primary">📩 Envoyer</button>
-            <div class="small">Si rien ne s’ouvre : envoyez sur WhatsApp, réponse rapide.</div>
+            <div class="small">Si urgence : WhatsApp = le plus rapide.</div>
           </div>
         </form>
+
+        <!-- Petit message si envoi OK (quand on revient avec ?sent=1) -->
+        <div id="sentMsg" class="notice" style="margin-top:12px; display:none;">
+          ✅ Merci ! Votre message a été envoyé. On vous répond très vite.
+        </div>
       </section>
 
       <aside class="card soft">
@@ -131,5 +162,16 @@
 </div>
 
 <script src="script.js"></script>
+<script>
+  // Message "envoyé" si URL contient ?sent=1
+  (function(){
+    const params = new URLSearchParams(window.location.search);
+    if(params.get("sent") === "1"){
+      const el = document.getElementById("sentMsg");
+      if(el) el.style.display = "block";
+    }
+  })();
+</script>
+
 </body>
-</html>
+  </html>
