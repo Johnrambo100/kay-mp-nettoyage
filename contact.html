@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact / Devis | KAY MP Nettoyage</title>
-  <meta name="description" content="Contactez KAY MP Nettoyage à Montauban : devis rapide WhatsApp, téléphone. Fin de chantier, remise en état, extérieur." />
-  <link rel="icon" href="images/logo.jpg">
-  <link rel="stylesheet" href="style.css?v=1" />
+  <title>Contact & Devis | KAY MP Nettoyage</title>
+  <meta name="description" content="Contactez KAY MP Nettoyage à Montauban : devis express WhatsApp, téléphone. Fin de chantier, remise en état, extérieur." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -14,22 +13,22 @@
   <div class="container">
     <div class="nav">
       <a class="brand" href="index.html">
-        <img src="images/logo.jpg" alt="Logo KAY MP Nettoyage" class="logo-img" data-logo>
-        <div class="name">
-          <strong>KAY MP Nettoyage</strong>
-          <span>Contact / Devis</span>
+        <div class="logoWrap">
+          <img class="logoImg" src="images/logo.jpg" alt="Logo KAY MP Nettoyage" data-open-logo />
+        </div>
+        <div class="title">
+          <b>KAY MP Nettoyage</b>
+          <span>Propreté • Finitions • Réactivité</span>
         </div>
       </a>
 
-      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" type="button">
-        <div class="bars"><span></span><span></span><span></span></div>
-      </button>
+      <button id="burgerBtn" class="hamburger" type="button" aria-label="Menu">☰</button>
 
-      <nav class="navlinks" id="navMenu" aria-label="Navigation principale">
+      <nav class="navlinks" id="navMenu">
         <a href="services.html">Services</a>
         <a href="realisations.html">Réalisations</a>
         <a href="apropos.html">À propos</a>
-        <a class="btn hot" href="contact.html#devis">Contact / Devis</a>
+        <a href="contact.html" class="btn primary">🚀 Devis express</a>
       </nav>
     </div>
   </div>
@@ -38,61 +37,53 @@
 <main class="section">
   <div class="container">
 
-    <section class="card">
-      <h1 class="h1" style="margin-bottom:6px">Contact & devis</h1>
+    <div class="card">
+      <h1 class="h1" style="margin-bottom:6px;">Contact & devis express</h1>
       <p class="lead">
-        Intervention en <strong>Occitanie</strong>, principalement <strong>Montauban & alentours</strong>.
-        Pour un devis rapide : <strong>WhatsApp</strong> (photos + surface + ville).
+        Intervention en <strong>Occitanie</strong>, surtout <strong>Montauban & alentours</strong>.
+        Le plus rapide : <strong>WhatsApp</strong> (photos + surface + ville).
       </p>
 
+      <div style="height:14px"></div>
       <div class="btnrow">
         <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 WhatsApp : 06 44 97 28 92</a>
         <a class="btn" href="tel:+33644972892">📞 Appeler</a>
       </div>
 
-      <div style="height:10px"></div>
+      <div style="height:14px"></div>
       <div class="notice">
-        <strong>Infos utiles pour le devis :</strong><br>
-        • Type de nettoyage (fin de chantier, vitres, logement, extérieur…)<br>
-        • Surface (approximative) + état<br>
-        • Ville / accès / délai souhaité<br>
-        • Photos (si possible)
+        <strong>Pour un devis précis :</strong><br/>
+        • Type de prestation (fin de chantier, vitres, extérieur…)<br/>
+        • Surface approximative + état des lieux<br/>
+        • Ville / accès / étage (si besoin)<br/>
+        • Délai souhaité
       </div>
-    </section>
+    </div>
 
-    <div style="height:14px"></div>
+    <div style="height:16px"></div>
 
     <div class="split">
-      <section class="card" id="devis">
-        <h2 class="h2">Devis express (WhatsApp)</h2>
-        <p class="small">Remplis → ça ouvre automatiquement WhatsApp avec le message prêt.</p>
+      <section class="card">
+        <h2 style="margin:0 0 10px;">Demande par email (option)</h2>
+        <p class="small" style="margin:0 0 14px;">
+          Le bouton ouvre votre appli mail. Si ça ne marche pas : WhatsApp est le plus fiable.
+        </p>
 
-        <form data-wa-form>
+        <form action="mailto:contact@kaympnettoyage.fr" method="post" enctype="text/plain">
           <div style="display:grid;gap:10px;">
-            <input name="nom" type="text" placeholder="Votre nom" required
-                   style="padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;">
-            <input name="tel" type="tel" placeholder="Votre téléphone" required
-                   style="padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;">
-            <input name="ville" type="text" placeholder="Ville (ex : Montauban)" required
-                   style="padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;">
-            <input name="prestation" type="text" placeholder="Prestation (ex : fin de chantier / élagage…)" required
-                   style="padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;">
-            <input name="surface" type="text" placeholder="Surface (approx.)"
-                   style="padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;">
-            <input name="delai" type="text" placeholder="Délai souhaité"
-                   style="padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;">
-            <textarea name="details" placeholder="Détails (état, contraintes, accès, étage…)"
-                      style="min-height:120px;padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;"></textarea>
-            <button type="submit" class="btn hot">🚀 Envoyer sur WhatsApp</button>
+            <input type="text" name="Nom" placeholder="Votre nom" required>
+            <input type="tel" name="Téléphone" placeholder="Votre téléphone" required>
+            <input type="text" name="Ville" placeholder="Ville (ex : Montauban)" required>
+            <input type="text" name="Prestation" placeholder="Prestation (ex : fin de chantier / tonte)" required>
+            <textarea name="Message" placeholder="Décrivez votre besoin (surface, état, contraintes, délai...)" required></textarea>
+            <button type="submit" class="btn primary">📩 Envoyer</button>
+            <div class="small">Si rien ne s’ouvre : envoyez sur WhatsApp, réponse rapide.</div>
           </div>
         </form>
-
-        <div style="height:10px"></div>
-        <div class="small">Astuce : ajoute 2–3 photos directement dans WhatsApp après l’ouverture.</div>
       </section>
 
-      <aside class="card">
-        <h2 class="h2">Coordonnées</h2>
+      <aside class="card soft">
+        <h2 style="margin:0 0 10px;">Coordonnées</h2>
 
         <div class="service" style="margin-bottom:12px;">
           <div class="icon">📞</div>
@@ -114,8 +105,7 @@
 
         <div style="height:12px"></div>
         <div class="notice">
-          <strong>Mail :</strong> si besoin<br>
-          <a href="mailto:contact@kaympnettoyage.fr">contact@kaympnettoyage.fr</a>
+          <strong>Astuce :</strong> 2–3 photos + surface + ville → réponse rapide.
         </div>
       </aside>
     </div>
@@ -124,20 +114,22 @@
 </main>
 
 <footer class="footer">
-  <div class="container">© <span id="y"></span> KAY MP Nettoyage.</div>
+  <div class="container">
+    <div>© <span id="y"></span> KAY MP Nettoyage — Montauban & Occitanie.</div>
+  </div>
 </footer>
 
-<div class="cta-bar">
-  <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 WhatsApp</a>
-  <a class="btn hot" href="#devis">🚀 Devis</a>
-  <a class="btn" href="tel:+33644972892">📞 Appeler</a>
+<!-- Modal logo -->
+<div class="modal" id="logoModal" aria-hidden="true">
+  <div class="modalBox">
+    <img src="images/logo.jpg" alt="Logo KAY MP Nettoyage (grand)" />
+    <div class="modalBar">
+      <div class="small">Logo KAY MP Nettoyage</div>
+      <button class="closeBtn" id="closeLogo">Fermer</button>
+    </div>
+  </div>
 </div>
 
-<div class="logo-lightbox" id="logoLightbox">
-  <span class="logo-close" id="logoClose">✕</span>
-  <img src="images/logo.jpg" alt="Logo grand format">
-</div>
-
-<script src="app.js?v=1" defer></script>
+<script src="script.js"></script>
 </body>
-          </html>
+</html>
