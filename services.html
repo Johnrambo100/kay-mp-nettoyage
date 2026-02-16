@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | KAY MP Nettoyage</title>
-  <meta name="description" content="Services : fin de chantier, remise en état, vitres, bureaux + extérieur (tonte, élagage, nettoyage, poubelles). Montauban & Occitanie." />
-  <link rel="icon" href="images/logo.jpg">
-  <link rel="stylesheet" href="style.css?v=1" />
+  <meta name="description" content="Services KAY MP Nettoyage : fin de chantier, remise en état, vitres, bureaux + extérieur (tonte, élagage, évacuation)." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -14,22 +13,22 @@
   <div class="container">
     <div class="nav">
       <a class="brand" href="index.html">
-        <img src="images/logo.jpg" alt="Logo KAY MP Nettoyage" class="logo-img" data-logo>
-        <div class="name">
-          <strong>KAY MP Nettoyage</strong>
-          <span>Services</span>
+        <div class="logoWrap">
+          <img class="logoImg" src="images/logo.jpg" alt="Logo KAY MP Nettoyage" data-open-logo />
+        </div>
+        <div class="title">
+          <b>KAY MP Nettoyage</b>
+          <span>Propreté • Finitions • Réactivité</span>
         </div>
       </a>
 
-      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" type="button">
-        <div class="bars"><span></span><span></span><span></span></div>
-      </button>
+      <button id="burgerBtn" class="hamburger" type="button" aria-label="Menu">☰</button>
 
-      <nav class="navlinks" id="navMenu" aria-label="Navigation principale">
+      <nav class="navlinks" id="navMenu">
         <a href="services.html">Services</a>
         <a href="realisations.html">Réalisations</a>
         <a href="apropos.html">À propos</a>
-        <a class="btn hot" href="contact.html">Contact / Devis</a>
+        <a href="contact.html" class="btn primary">🚀 Devis express</a>
       </nav>
     </div>
   </div>
@@ -37,112 +36,119 @@
 
 <main class="section">
   <div class="container">
+    <div class="card">
+      <h1 class="h1" style="margin-bottom:6px;">Nos services</h1>
+      <p class="lead">Intérieur + extérieur — <strong>Montauban & alentours</strong>. Devis rapide sur WhatsApp.</p>
 
-    <section class="card">
-      <h1 class="h1" style="margin-bottom:6px">Nos services</h1>
-      <p class="lead">Intérieur + extérieur — <strong>Montauban & alentours</strong> (Occitanie).</p>
-
+      <div style="height:14px"></div>
       <div class="btnrow">
-        <a class="btn hot" href="contact.html#devis">🚀 Devis express</a>
+        <a class="btn primary" href="contact.html">🚀 Devis express</a>
         <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 WhatsApp</a>
         <a class="btn" href="tel:+33644972892">📞 06 44 97 28 92</a>
       </div>
-    </section>
+    </div>
 
-    <div style="height:14px"></div>
+    <div style="height:16px"></div>
 
     <section class="card">
-      <h2 class="h2">🏠 Nettoyage intérieur</h2>
+      <h2 style="margin:0 0 10px;">🏠 Nettoyage intérieur</h2>
       <div class="cards">
         <div class="service">
-          <div class="icon">🏗</div>
+          <div class="icon">🏗️</div>
           <h3>Fin de chantier</h3>
-          <p>Poussières, traces, sols, vitres, sanitaires : prêt à livrer.</p>
+          <p>Poussières, traces, résidus, sols, vitres, sanitaires : prêt à livrer.</p>
         </div>
         <div class="service">
-          <div class="icon">🧼</div>
+          <div class="icon">🧽</div>
           <h3>Remise en état</h3>
-          <p>Après location / déménagement : nettoyage approfondi.</p>
+          <p>Après location/déménagement : nettoyage approfondi + détails.</p>
         </div>
         <div class="service">
           <div class="icon">🪟</div>
           <h3>Vitres & vitrines</h3>
-          <p>Fenêtres, baies vitrées : résultat net, sans traces.</p>
+          <p>Fenêtres, baies, vitrines : résultat net, sans traces.</p>
         </div>
         <div class="service">
           <div class="icon">🏢</div>
           <h3>Bureaux & locaux</h3>
-          <p>Entretien ponctuel ou régulier, prestations sur-mesure.</p>
+          <p>Espaces de travail propres : sols, sanitaires, surfaces, poubelles.</p>
         </div>
         <div class="service">
           <div class="icon">🛁</div>
-          <h3>Salles d’eau / sanitaires</h3>
-          <p>Détartrage, désinfection, remise au propre.</p>
+          <h3>Salles d’eau</h3>
+          <p>Détartrage, brillance, hygiène : rendu impeccable.</p>
         </div>
         <div class="service">
-          <div class="icon">🧽</div>
+          <div class="icon">✨</div>
           <h3>Détails & finitions</h3>
-          <p>Poignées, plinthes, traces, finitions soignées.</p>
+          <p>Angles, plinthes, encadrements, traces : on finit proprement.</p>
         </div>
       </div>
     </section>
 
-    <div style="height:14px"></div>
+    <div style="height:16px"></div>
 
     <section class="card">
-      <h2 class="h2">🌿 Extérieur & multi-services</h2>
+      <h2 style="margin:0 0 10px;">🌿 Extérieur (multi-services)</h2>
       <div class="cards">
         <div class="service">
-          <div class="icon">🌳</div>
-          <h3>Élagage / coupe branches</h3>
-          <p>Après intempéries : sécurisation, coupe, évacuation selon besoin.</p>
-        </div>
-        <div class="service">
-          <div class="icon">🧺</div>
-          <h3>Sortie poubelles</h3>
-          <p>Gestion des bacs, sortie / rentrée, propreté des abords.</p>
-        </div>
-        <div class="service">
           <div class="icon">🌱</div>
-          <h3>Tonte & entretien</h3>
-          <p>Tonte, débroussaillage léger, remise au propre.</p>
+          <h3>Tonte</h3>
+          <p>Pelouse nette, bords propres, ramassage si besoin.</p>
+        </div>
+        <div class="service">
+          <div class="icon">🌳</div>
+          <h3>Élagage / coupe</h3>
+          <p>Coupe de branches, intervention après intempéries (selon accès).</p>
         </div>
         <div class="service">
           <div class="icon">🧹</div>
           <h3>Nettoyage extérieur</h3>
-          <p>Terrasses, allées, abords : rendu propre et net.</p>
+          <p>Ramassage déchets, feuilles, nettoyage zones extérieures.</p>
+        </div>
+        <div class="service">
+          <div class="icon">🗑️</div>
+          <h3>Sortie poubelles</h3>
+          <p>Gestion poubelles, rangement, propreté des zones.</p>
         </div>
         <div class="service">
           <div class="icon">🚚</div>
-          <h3>Evacuation / désencombrement</h3>
-          <p>Petite évacuation (selon volume) : demande par WhatsApp.</p>
+          <h3>Évacuation</h3>
+          <p>Évacuation petits encombrants / végétaux (selon volume).</p>
         </div>
         <div class="service">
-          <div class="icon">📸</div>
-          <h3>Devis rapide</h3>
-          <p>Photos + surface + ville → réponse rapide sur WhatsApp.</p>
+          <div class="icon">✅</div>
+          <h3>Intervention rapide</h3>
+          <p>Envoi photos + ville + surface → réponse rapide.</p>
         </div>
       </div>
     </section>
 
+    <div style="height:16px"></div>
+
+    <div class="notice">
+      <strong>Pour un devis express :</strong> envoyez <strong>photos</strong> + <strong>surface</strong> + <strong>ville</strong> sur WhatsApp.
+    </div>
   </div>
 </main>
 
 <footer class="footer">
-  <div class="container">© <span id="y"></span> KAY MP Nettoyage.</div>
+  <div class="container">
+    <div>© <span id="y"></span> KAY MP Nettoyage — Montauban & Occitanie.</div>
+  </div>
 </footer>
 
-<div class="cta-bar">
-  <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 WhatsApp</a>
-  <a class="btn hot" href="contact.html#devis">🚀 Devis</a>
-  <a class="btn" href="tel:+33644972892">📞 Appeler</a>
+<!-- Modal logo -->
+<div class="modal" id="logoModal" aria-hidden="true">
+  <div class="modalBox">
+    <img src="images/logo.jpg" alt="Logo KAY MP Nettoyage (grand)" />
+    <div class="modalBar">
+      <div class="small">Logo KAY MP Nettoyage</div>
+      <button class="closeBtn" id="closeLogo">Fermer</button>
+    </div>
+  </div>
 </div>
 
-<div class="logo-lightbox" id="logoLightbox">
-  <span class="logo-close" id="logoClose">✕</span>
-  <img src="images/logo.jpg" alt="Logo grand format">
-</div>
-
-<script src="app.js?v=1" defer></script>
+<script src="script.js"></script>
 </body>
-  </html>
+</html>
