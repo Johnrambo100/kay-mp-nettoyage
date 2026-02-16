@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>À propos | KAY MP Nettoyage</title>
-  <meta name="description" content="KAY MP Nettoyage : propreté, finitions, réactivité. Interventions Montauban & Occitanie." />
-  <link rel="icon" href="images/logo.jpg">
-  <link rel="stylesheet" href="style.css?v=1" />
+  <meta name="description" content="KAY MP Nettoyage à Montauban : propreté, finitions, réactivité. Fin de chantier, remise en état, extérieur." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -14,22 +13,22 @@
   <div class="container">
     <div class="nav">
       <a class="brand" href="index.html">
-        <img src="images/logo.jpg" alt="Logo KAY MP Nettoyage" class="logo-img" data-logo>
-        <div class="name">
-          <strong>KAY MP Nettoyage</strong>
-          <span>À propos</span>
+        <div class="logoWrap">
+          <img class="logoImg" src="images/logo.jpg" alt="Logo KAY MP Nettoyage" data-open-logo />
+        </div>
+        <div class="title">
+          <b>KAY MP Nettoyage</b>
+          <span>Propreté • Finitions • Réactivité</span>
         </div>
       </a>
 
-      <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" type="button">
-        <div class="bars"><span></span><span></span><span></span></div>
-      </button>
+      <button id="burgerBtn" class="hamburger" type="button" aria-label="Menu">☰</button>
 
-      <nav class="navlinks" id="navMenu" aria-label="Navigation principale">
+      <nav class="navlinks" id="navMenu">
         <a href="services.html">Services</a>
         <a href="realisations.html">Réalisations</a>
         <a href="apropos.html">À propos</a>
-        <a class="btn hot" href="contact.html">Contact / Devis</a>
+        <a href="contact.html" class="btn primary">🚀 Devis express</a>
       </nav>
     </div>
   </div>
@@ -37,13 +36,15 @@
 
 <main class="section">
   <div class="container">
-    <section class="card">
-      <h1 class="h1" style="margin-bottom:6px">À propos</h1>
+    <div class="card">
+      <h1 class="h1" style="margin-bottom:6px;">À propos</h1>
       <p class="lead">
-        KAY MP Nettoyage intervient en <strong>Occitanie</strong>, principalement <strong>Montauban & alentours</strong>.
-        Notre objectif : un résultat <strong>propre</strong>, <strong>net</strong> et <strong>soigné</strong>.
+        KAY MP Nettoyage intervient sur <strong>Montauban & alentours</strong> pour des prestations
+        <strong>propres</strong>, <strong>soignées</strong> et <strong>rapides</strong>.
+        Objectif : un rendu <strong>impeccable</strong> — prêt à livrer.
       </p>
 
+      <div style="height:16px"></div>
       <div class="cards">
         <div class="service">
           <div class="icon">✅</div>
@@ -51,7 +52,7 @@
           <p>Finitions, détails, contrôle final.</p>
         </div>
         <div class="service">
-          <div class="icon">📅</div>
+          <div class="icon">🕒</div>
           <h3>Souplesse</h3>
           <p>Créneaux adaptés à vos délais (réception chantier, état des lieux…).</p>
         </div>
@@ -62,31 +63,33 @@
         </div>
       </div>
 
-      <div style="height:12px"></div>
+      <div style="height:14px"></div>
       <div class="btnrow">
-        <a class="btn hot" href="contact.html#devis">🚀 Devis express</a>
+        <a class="btn primary" href="contact.html">🚀 Devis express</a>
         <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 WhatsApp</a>
         <a class="btn" href="tel:+33644972892">📞 06 44 97 28 92</a>
       </div>
-    </section>
+    </div>
   </div>
 </main>
 
 <footer class="footer">
-  <div class="container">© <span id="y"></span> KAY MP Nettoyage.</div>
+  <div class="container">
+    <div>© <span id="y"></span> KAY MP Nettoyage — Montauban & Occitanie.</div>
+  </div>
 </footer>
 
-<div class="cta-bar">
-  <a class="btn success" href="https://wa.me/33644972892" target="_blank" rel="noopener">💬 WhatsApp</a>
-  <a class="btn hot" href="contact.html#devis">🚀 Devis</a>
-  <a class="btn" href="tel:+33644972892">📞 Appeler</a>
+<!-- Modal logo -->
+<div class="modal" id="logoModal" aria-hidden="true">
+  <div class="modalBox">
+    <img src="images/logo.jpg" alt="Logo KAY MP Nettoyage (grand)" />
+    <div class="modalBar">
+      <div class="small">Logo KAY MP Nettoyage</div>
+      <button class="closeBtn" id="closeLogo">Fermer</button>
+    </div>
+  </div>
 </div>
 
-<div class="logo-lightbox" id="logoLightbox">
-  <span class="logo-close" id="logoClose">✕</span>
-  <img src="images/logo.jpg" alt="Logo grand format">
-</div>
-
-<script src="app.js?v=1" defer></script>
+<script src="script.js"></script>
 </body>
-      </html>
+  </html>
