@@ -8,45 +8,56 @@
     document.body.style.overflow = "";
     burger?.setAttribute("aria-expanded", "false");
   }
-
-  function openCloseMenu() {
+  function toggleMenu() {
     if (!menu) return;
     const willOpen = !menu.classList.contains("show");
     menu.classList.toggle("show");
-
-    // bloque le scroll quand menu ouvert (mobile)
     document.body.style.overflow = willOpen ? "hidden" : "";
     burger?.setAttribute("aria-expanded", willOpen ? "true" : "false");
   }
 
-  // ===== Menu mobile
   if (burger && menu) {
-    burger.addEventListener("click", (e) => {
-      e.preventDefault();
-      openCloseMenu();
-    });
+    burger.addEventListener("click", (e) => { e.preventDefault(); toggleMenu(); });
 
-    // Fermer si on clique en dehors
     document.addEventListener("click", (e) => {
       const inside = menu.contains(e.target) || burger.contains(e.target);
       if (!inside) closeMenu();
     });
 
-    // Fermer dès qu'on clique sur un lien de menu
-    menu.querySelectorAll("a").forEach((a) => {
-      a.addEventListener("click", () => closeMenu());
-    });
+    // ferme quand on clique un lien
+    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
 
-    // Fermer au chargement + au retour arrière (bfcache)
-    window.addEventListener("pageshow", () => closeMenu());
-    window.addEventListener("load", () => closeMenu());
+    // ferme au chargement + retour arrière (bfcache)
+    window.addEventListener("pageshow", closeMenu);
+    window.addEventListener("load", closeMenu);
   }
 
-  // ===== Year
+  // Year footer
   const y = document.getElementById("y");
   if (y) y.textContent = new Date().getFullYear();
 
-  // ===== Lightbox (gallery)
+  // Logo lightbox
+  const logo = document.querySelector("[data-logo]");
+  const logoLb = document.getElementById("logoLightbox");
+  const logoClose = document.getElementById("logoClose");
+  if (logo && logoLb) {
+    logo.addEventListener("click", () => {
+      logoLb.classList.add("open");
+      document.body.style.overflow = "hidden";
+    });
+    logoClose?.addEventListener("click", () => {
+      logoLb.classList.remove("open");
+      document.body.style.overflow = "";
+    });
+    logoLb.addEventListener("click", (e) => {
+      if (e.target === logoLb) {
+        logoLb.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+    });
+  }
+
+  // Lightbox galerie
   const lb = document.querySelector(".lightbox");
   if (lb) {
     const lbImg = lb.querySelector("img");
@@ -58,7 +69,7 @@
       idx = i;
       const el = shots[idx];
       const src = el.getAttribute("data-full") || el.querySelector("img")?.getAttribute("src");
-      const title = el.getAttribute("data-title") || "";
+      const title = el.getAttribute("data-title") || "Photo";
       if (lbImg && src) lbImg.src = src;
       if (lbTitle) lbTitle.textContent = title;
       lb.classList.add("open");
@@ -89,7 +100,7 @@
     });
   }
 
-  // ===== WhatsApp form (Contact page)
+  // Form WhatsApp (contact)
   const waForm = document.querySelector("[data-wa-form]");
   if (waForm) {
     waForm.addEventListener("submit", (e) => {
@@ -107,8 +118,7 @@ Délai: ${(fd.get("delai") || "").toString().trim()}
 Détails: ${(fd.get("details") || "").toString().trim()}`;
 
       const phone = "33644972892";
-      const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
-      window.open(url, "_blank", "noopener");
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, "_blank", "noopener");
     });
   }
 })();
